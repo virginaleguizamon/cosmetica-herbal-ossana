@@ -48,7 +48,7 @@ let stockProductos = [
     },
 
     {id:6,
-    img: '../media/mascarillas.PNG', 
+    img: '../media/mascarillas.png', 
     categoria: "Facial", 
     nombre: "Mascarillas", 
     desc:"Calmante, desintoxicante y antiinflamatoria.",
@@ -102,7 +102,7 @@ let stockProductos = [
     },
 
     {id:12,
-    img: '../media/kit-facial.png.',  
+    img: '../media/kit-facial.png',  
     categoria: "Kit",  
     nombre: "Kit Facial",
     desc:"Especial para tu rutina diaria.",
