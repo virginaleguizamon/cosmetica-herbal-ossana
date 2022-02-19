@@ -105,8 +105,9 @@ const eliminar = ()=>{
         
         iterator.addEventListener("click", () => {
             
-            let id =  iterator.id.slice(12)
-            carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != el.id)
+            let id =  iterator.id.slice(13)
+            console.log(id)
+            carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != id)
          
         })    
          
