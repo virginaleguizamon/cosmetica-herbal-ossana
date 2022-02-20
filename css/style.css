@@ -471,24 +471,6 @@ footer {
 .botonAdd:hover {
   color: white; }
 
-/* BOTON CARRITO */
-/*#boton-carrito {
-    border: none;
-    color:#38A3A5 ;
-    font-size: 25px;
-    background-color:#C9E265 ;
-    border-radius: 50%;
-    padding: 5px 15px;
-    transition: all .3s;
-}
-#boton-carrito:hover{
-    cursor: pointer;
-    color: #C9E265;
-    background-color:#38A3A5  ;
-}
-.carroImg{
-    height: 30px;
-}*/
 /*  MODAL */
 /*----------- boton para abrirlo ------------*/
 #abrir-modal {
