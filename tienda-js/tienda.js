@@ -111,7 +111,7 @@ const eliminar = ()=>{
             
             let id =  iterator.id.slice(13)
             console.log(id)
-            botonEliminar.parentElement.remove()   
+            iterator.parentElement.remove()   
             carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != id)
          
         })    
