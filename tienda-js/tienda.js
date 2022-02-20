@@ -6,6 +6,11 @@ let carritoDeCompras = []
 // cards
 const productos = document.querySelector(".contenedorProductos");
 
+//contador carrito
+const contadorCarrito = document.getElementById('contadorCarrito');
+
+//precio total
+const precioTotal = document.getElementById('precioTotal');
 
 
 
@@ -76,8 +81,7 @@ const addCarrito = () => {
             let productoAgregar = stockProductos.find( el => el.id  ===  parseInt(id) )
             carritoDeCompras.push(productoAgregar)
             console.log(carritoDeCompras);
-         
-            precio();
+            actualizarCarrito();
             
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
                     
@@ -117,7 +121,8 @@ const eliminar = ()=>{
 
 
 // ------- Precio total carrito -------------
-function precio (){
+function actualizarCarrito(){
+    contadorCarrito.innerText = carritoDeCompras.reduce((acc,el)=> acc + el.cantidad, 0)
     precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + (el.precio * el.cantidad), 0)
 
 }
