@@ -80,8 +80,8 @@ const addCarrito = () => {
             let id =  iterator.id.slice(12)
             let productoAgregar = stockProductos.find( el => el.id  ===  parseInt(id) )
             carritoDeCompras.push(productoAgregar)
-            console.log(carritoDeCompras);
             actualizarCarrito();
+            //console.log(carritoDeCompras);            
             
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
                     
