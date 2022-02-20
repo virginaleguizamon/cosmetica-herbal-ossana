@@ -74,7 +74,7 @@ const addCarrito = () => {
     for (const iterator of botonAgregar) {
         // console.log(iterator.id);
         
-        // evento agregar
+        
         iterator.addEventListener("click", () => {
             
             let id =  iterator.id.slice(12)
@@ -111,6 +111,7 @@ const eliminar = ()=>{
             
             let id =  iterator.id.slice(13)
             console.log(id)
+            botonEliminar.parentElement.remove()   
             carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != id)
          
         })    
