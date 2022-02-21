@@ -111,10 +111,9 @@ const eliminar = ()=>{
             
             let id =  iterator.id.slice(13)
             //console.log(id)
-           
-            botonEliminar.parentElement.remove()   
+            console.log(botonEliminar.parentElement)
             carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != id)
-            console.log(id)
+            
             
             actualizarCarrito();
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
