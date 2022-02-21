@@ -111,9 +111,14 @@ const eliminar = ()=>{
             
             let id =  iterator.id.slice(13)
             //console.log(id)
-            botonEliminar(id).parentElement.remove()   
+           
+            botonEliminar.parentElement.remove()   
             carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != id)
-         
+            console.log(id)
+            
+            actualizarCarrito();
+            localStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
+
         })    
          
     }
@@ -128,8 +133,33 @@ function actualizarCarrito(){
 
 }
 
+//------------- Cantidad -----------------
+/*let repetido = carritoDeCompras.find(item => item.id == id)
+    if(repetido){
+        console.log(repetido);
+        repetido.cantidad = repetido.cantidad + 1
+        
+        document.getElementById(`cantidad${repetido.id}`).innerHTML = `<p id= cantidad${repetido.id}>Cantidad:${repetido.cantidad}</p>`
+        
+        actualizarCarrito()
+
+    }else{
+        eliminar();
+    }*/
+
+
 
 
 // -------  LS -----------
+/*function recuperar() {
+    let recuperarLS = JSON.parse(localStorage.getItem('carrito'))
+    console.log(recuperarLS);
+    if(recuperarLS){
+        recuperarLS.forEach(element => {
+            agregarAlCarrito(element.id)
+        });
+    }
+}
 
+recuperar()*/
 
