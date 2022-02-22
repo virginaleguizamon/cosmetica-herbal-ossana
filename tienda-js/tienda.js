@@ -99,7 +99,7 @@ createCard(stockProductos);
 
 // ----------- Eliminar productos ---------------
 
-const eliminar = ()=>{
+const eliminar = () =>{
     let botonEliminar = document.getElementsByClassName("boton-eliminar")
     // console.log(botonEiminar)
     
@@ -113,6 +113,7 @@ const eliminar = ()=>{
             //console.log(id)
             carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != id)
             console.log(carritoDeCompras);
+            //reutilizo la interfaz del modal
             pintarModal();
 
 
@@ -139,18 +140,17 @@ function actualizarCarrito(){
 
 
 //------------- Cantidad -----------------
-/*let repetido = carritoDeCompras.find(item => item.id == id)
-    if(repetido){
-        console.log(repetido);
-        repetido.cantidad = repetido.cantidad + 1
+let cantidad  = carritoDeCompras.find(elemento => elemento.id == id)
+    if(cantidad){
+        console.log(cantidad);
+        //repetido.cantidad = repetido.cantidad + 1
         
-        document.getElementById(`cantidad${repetido.id}`).innerHTML = `<p id= cantidad${repetido.id}>Cantidad:${repetido.cantidad}</p>`
-        
-        actualizarCarrito()
+        //document.getElementById(`cantidad${repetido.id}`).innerHTML = `<p id= cantidad${repetido.id}>Cantidad:${repetido.cantidad}</p>`
+          
 
     }else{
-        eliminar();
-    }*/
+      addCarrito()
+    }
 
 
 

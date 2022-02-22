@@ -4,6 +4,7 @@
  let botonAbrir = document.getElementById("abrir-modal")
     
   botonAbrir.addEventListener("click", () => {
+    //llamo el modal
     pintarModal();
   })
 
