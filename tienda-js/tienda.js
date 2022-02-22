@@ -111,9 +111,11 @@ const eliminar = ()=>{
             
             let id =  iterator.id.slice(13)
             //console.log(id)
-            console.log(botonEliminar.parentElement)
             carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != id)
-            
+            console.log(carritoDeCompras);
+            pintarModal();
+
+
             
             actualizarCarrito();
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
@@ -131,6 +133,9 @@ function actualizarCarrito(){
     precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + (el.precio * el.cantidad), 0)
 
 }
+
+
+
 
 //------------- Cantidad -----------------
 /*let repetido = carritoDeCompras.find(item => item.id == id)
@@ -151,13 +156,13 @@ function actualizarCarrito(){
 
 // -------  LS -----------
 /*function recuperar() {
-    let recuperarLS = JSON.parse(localStorage.getItem('carrito'))
+    let recuperarLS = JSON.parse(localStorage.getItem('carrito')) || []
     console.log(recuperarLS);
-    if(recuperarLS){
+    recuperarLS &&
         recuperarLS.forEach(element => {
             agregarAlCarrito(element.id)
         });
-    }
+    
 }
 
 recuperar()*/
