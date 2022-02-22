@@ -111,15 +111,15 @@ const eliminar = () =>{
         iterator.addEventListener("click", () => {
             
             let id =  iterator.id.slice(13)
-            //console.log(id)
+            console.log(iterator.parentElement)
+            
             carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != id)
             console.log(carritoDeCompras);
+            
             //reutilizo la interfaz del modal
-            pintarModal();
-
-
-
-            //actualizarCarrito();
+            iterator.parentElement.remove()
+            
+            actualizarCarrito();
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
 
         })    
