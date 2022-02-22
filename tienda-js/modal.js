@@ -19,12 +19,11 @@
       modalBody.innerHTML +=
                       
                       `
-                        <div>
                            <p>${el.nombre}</p>
                            <p>$${el.precio}</p>
                            <p id=cantidad ${el.id}>Cantidad:${el.cantidad}</p>
                            <button id="botonEliminar${el.id}"class="boton-eliminar"><img class="basura" src="../media/eliminar.png" alt="eliminar"></button>  
-                        </div>
+                        
                      `
                     
             

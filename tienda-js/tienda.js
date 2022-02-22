@@ -119,7 +119,7 @@ const eliminar = () =>{
 
 
 
-            actualizarCarrito();
+            //actualizarCarrito();
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
 
         })    
