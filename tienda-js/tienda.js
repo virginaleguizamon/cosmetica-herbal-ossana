@@ -116,7 +116,7 @@ const eliminar = ()=>{
             pintarModal();
 
 
-            
+
             actualizarCarrito();
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
 
@@ -133,6 +133,7 @@ function actualizarCarrito(){
     precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + (el.precio * el.cantidad), 0)
 
 }
+    
 
 
 
