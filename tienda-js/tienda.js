@@ -65,6 +65,23 @@ function createCard(stockProductos){
   
 }
 
+//------------- Cantidad -----------------
+
+let cantidad  = carritoDeCompras.find(elemento => elemento.id == id)
+    if(cantidad){
+        console.log(cantidad);
+        //repetido.cantidad = repetido.cantidad + 1
+        
+        //document.getElementById(`cantidad${repetido.id}`).innerHTML = `<p id= cantidad${repetido.id}>Cantidad:${repetido.cantidad}</p>`
+          
+
+    }else{
+      addCarrito()
+      eliminar()
+    }
+
+
+
 // ------------- Agregar productos al carrito --------------
 
 const addCarrito = () => {
@@ -135,25 +152,6 @@ function actualizarCarrito(){
 
 }
     
-
-
-
-
-//------------- Cantidad -----------------
-
-let cantidad  = carritoDeCompras.find(elemento => elemento.id == id)
-    if(cantidad){
-        console.log(cantidad);
-        //repetido.cantidad = repetido.cantidad + 1
-        
-        //document.getElementById(`cantidad${repetido.id}`).innerHTML = `<p id= cantidad${repetido.id}>Cantidad:${repetido.cantidad}</p>`
-          
-
-    }else{
-      addCarrito()
-    }
-
-
 
 
 // -------  LS -----------
