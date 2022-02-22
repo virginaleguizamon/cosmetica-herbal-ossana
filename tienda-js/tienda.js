@@ -140,6 +140,7 @@ function actualizarCarrito(){
 
 
 //------------- Cantidad -----------------
+
 let cantidad  = carritoDeCompras.find(elemento => elemento.id == id)
     if(cantidad){
         console.log(cantidad);
