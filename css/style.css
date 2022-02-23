@@ -522,7 +522,7 @@ footer {
 .basura {
   height: 30px; }
 
-.boton-comprar {
+#botonComprar {
   background-color: #38A3A5;
   color: #C9E265;
   border-radius: 5px;
@@ -530,5 +530,5 @@ footer {
   width: 90px;
   height: 40px; }
 
-.boton-comprar:hover {
+#botonComprar:hover {
   color: white; }

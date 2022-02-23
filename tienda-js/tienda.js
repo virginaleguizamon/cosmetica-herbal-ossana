@@ -119,24 +119,15 @@ const eliminar = () =>{
         
         
         iterator.addEventListener("click", () => {
-            
-            Swal.fire({
-                title: '¿Desea eliminarlo?',    /*Este sweetalert lo elegí porque me parecío que era mejor para la interacción con el usuario y que pueda elegir si elminar o no.*/
-                icon: 'warning',                                    
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: '¡Sí, elimínalo!'
-              }).then((result) => {
-                
-                if (result.isConfirmed) {
-                  Swal.fire(
-                    '¡Eliminado!',
-                    'Tu producto fue eliminado.',
-                    'success'
-                  )
+            Toastify({
+                text: " 💔 Eliminado",  /* Bueno, este lo mismo que el anterior pero para eliminar y asegurarse de que se eliminó correctamente.*/
+                className: "info",
+                gravity: "bottom",
+                style: {
+                  background: "#38A3A5", 
                 }
-              })
+            }).showToast();
+           
 
             let id =  iterator.id.slice(13)
             //console.log(iterator.parentElement)

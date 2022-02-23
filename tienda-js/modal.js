@@ -34,9 +34,17 @@
   }   
   
 
+  let botonComprar = document.getElementById ("botonComprar")
+  botonComprar.addEventListener("click", () =>{
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: '¡Su compra ha sido éxitosa!',
+      showConfirmButton: false,
+      timer: 1500
+    })
 
-
-
+  })
 
 
 
