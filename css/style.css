@@ -472,7 +472,30 @@ footer {
   color: white; }
 
 /*  MODAL */
-/*----------- boton para abrirlo ------------*/
+.modal-title {
+  color: #38A3A5;
+  font-family: 'Yeseva One', cursive;
+  font-size: 20px; }
+
+.modal-carrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px; }
+
+.modal-text {
+  font-family: 'Baloo 2', cursive;
+  font-size: 15px; }
+
+.precioProducto {
+  font-family: 'Yeseva One', cursive;
+  font-size: 15px;
+  color: #38A3A5; }
+
+#precioTotal {
+  font-family: 'Baloo 2', cursive;
+  font-size: 20px; }
+
 #abrir-modal {
   border: none;
   color: #38A3A5;
@@ -488,6 +511,24 @@ footer {
 #abrir-modal:hover {
   background-color: #38A3A5; }
 
-/* ------------ boton para eliminar ------------- */
+.boton-eliminar {
+  border: none;
+  border-radius: 5px;
+  background-color: #C9E265; }
+
+.boton-eliminar:hover {
+  opacity: 0.8; }
+
 .basura {
   height: 30px; }
+
+.boton-comprar {
+  background-color: #38A3A5;
+  color: #C9E265;
+  border-radius: 5px;
+  border: none;
+  width: 90px;
+  height: 40px; }
+
+.boton-comprar:hover {
+  color: white; }
