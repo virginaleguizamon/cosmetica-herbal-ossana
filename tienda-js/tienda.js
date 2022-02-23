@@ -40,20 +40,20 @@ for (let i = 0; i < itemsNav.length; i++){
 function createCard(stockProductos){
     productos.innerHTML= "";
     stockProductos.forEach(producto=>{
+    const {img, nombre, categoria, desc, precio, id} = producto
     productos.innerHTML +=  
-    
-    // desestructurar 
+
         `
                 <div class="card">
                    
-                    <img class="imagenCard" src="${producto.img}" alt="${producto.nombre}">
+                    <img class="imagenCard" src="${img}" alt="${nombre}">
                     
                     <div class="cardTexto">
-                        <p class="categoria">${producto.categoria}</p>
-                        <h2 class="nombre">${producto.nombre}</h2>
-                        <p class="desc">${producto.desc}</p>
-                        <p class="precio">$${producto.precio}</p>
-                        <button class= "botonAdd" id="botonAgregar${producto.id}">Agregar</button>
+                        <p class="categoria">${categoria}</p>
+                        <h2 class="nombre">${nombre}</h2>
+                        <p class="desc">${desc}</p>
+                        <p class="precio">$${precio}</p>
+                        <button class= "botonAdd" id="botonAgregar${id}">Agregar</button>
                     </div>
                 </div> 
         `
@@ -77,10 +77,20 @@ const addCarrito = () => {
         
         
         iterator.addEventListener("click", () => {
-            
+            Toastify({
+                text: "💖Agregado al carrito",  /* Las notificaciones me encantaron, la usé acá porque creo que al usuario le da seguridad de que se agregó y no tener que entrar al carrito a fijarse.*/
+                className: "info",
+                gravity: "bottom",
+                style: {
+                  background: "#38A3A5", 
+                }
+            }).showToast();
+
             let id =  iterator.id.slice(12)
+            
             let productoAgregar = stockProductos.find( el => el.id  ===  parseInt(id) )
-            carritoDeCompras.push(productoAgregar)
+            carritoDeCompras = [...carritoDeCompras, productoAgregar]
+            
             actualizarCarrito();
             //console.log(carritoDeCompras);            
             
@@ -110,8 +120,26 @@ const eliminar = () =>{
         
         iterator.addEventListener("click", () => {
             
+            Swal.fire({
+                title: '¿Desea eliminarlo?',    /*Este sweetalert lo elegí porque me parecío que era mejor para la interacción con el usuario y que pueda elegir si elminar o no.*/
+                icon: 'warning',                                    
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '¡Sí, elimínalo!'
+              }).then((result) => {
+                
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    '¡Eliminado!',
+                    'Tu producto fue eliminado.',
+                    'success'
+                  )
+                }
+              })
+
             let id =  iterator.id.slice(13)
-            console.log(iterator.parentElement)
+            //console.log(iterator.parentElement)
             
             carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != id)
             console.log(carritoDeCompras);
@@ -120,7 +148,10 @@ const eliminar = () =>{
             iterator.parentElement.remove()
             
             actualizarCarrito();
+            
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
+
+            
 
         })    
          
@@ -134,15 +165,11 @@ const eliminar = () =>{
 /*let cantidad  = carritoDeCompras.find(elemento => elemento.id == id)
     if(cantidad){
         console.log(cantidad);
-        //repetido.cantidad = repetido.cantidad + 1
-        
-        //document.getElementById(`cantidad${repetido.id}`).innerHTML = `<p id= cantidad${repetido.id}>Cantidad:${repetido.cantidad}</p>`
-          
-
-    }else{
       
-    }*/
-
+    }else{
+     pintarModal()
+    }
+*/
 
 
 // ------- Precio total carrito -------------
