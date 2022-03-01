@@ -153,15 +153,15 @@ const eliminar = () =>{
 
 //------------- Cantidad -----------------
 
-/*let cantidad  = carritoDeCompras.find(elemento => elemento.id == id)
+/*let cantidad  = carritoDeCompras.findIndex(elemento => elemento.id == id)
     if(cantidad){
-        console.log(cantidad);
+     
       
     }else{
-     pintarModal()
-    }
-*/
 
+    }
+
+*/
 
 // ------- Precio total carrito -------------
 function actualizarCarrito(){

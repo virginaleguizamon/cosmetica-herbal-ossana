@@ -1,3 +1,6 @@
+
+@import"variables.scss";
+
 *{
     margin: 0px;
     padding: 0px;
@@ -7,32 +10,30 @@
 
 
 
-/* ----------------FORMS------------------- */
+/* ----------------FORM------------------- */
 
 
-/* fomulario contacto*/
-
-.formulario2{
+.formulario{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.formContacto{
+.formulario__contacto{
     background-color: #E2FDFF;
     width: 30%;
     padding: 10px 0px;
     border-radius: 10px;
     box-shadow: 0 0 6px 0 #7e8987;
 }
-.formContacto{
+.formulario__contacto{
     margin: auto;
 }
-.tituloForm{
+.formulario__titulo{
     color: #38A3A5;
     text-align: center;
     margin: 10px 0px;
-    font-family:'Lobster', cursive;
+    font-family:$titulo-font;
 }
 
 .formulario__grupo{
@@ -40,7 +41,7 @@
     margin: 45px;
 }
 .fondoContacto{
-    background-color:#C9E265;
+    background-color:$color-fondo;
 }
 
 input, textarea{
@@ -67,11 +68,11 @@ textarea:focus~label, textarea:valid~label{
     color: #38A3A5;
 }
 label{
-    font-family: 'Baloo 2', cursive ;
+    font-family: $subtitulo-font ;
 }
 
 /*------- BOTON FORM CONTACTO----------*/
-.botonContacto{
+.formulario__boton{
     display: block;
     width: 100px;
     height: 40px;
@@ -82,40 +83,37 @@ label{
     font-size: 16px;
     margin: 10px auto;
 }
-.botonContacto:hover{
+.formulario__boton:hover{
     color: #EAE2B7;
 }
 
-
-
+/*--------MEDIA QUERIES contacto-------*/
+@media screen and (max-width:1100px){
+    .formulario__contacto{
+        width: 50%;
+    }
+}
+@media screen and (max-width:600px){
+    .formulario__contacto{
+        width: 60%;
+    }
+}
+@media screen and (max-width:450px){
+    .formulario__contacto{
+        width: 80%;
+    }
+}
+@media screen and (max-width:300px){
+    .formulario__contacto{
+        width: 90%;
+    }
+}
 
 
 /* CATÁLOGO */
 .fondoTienda{
-    background-color: #C9E265;
+    background-color:$color-fondo;
 }
-/*.tituloTienda{
-    color: #38A3A5;
-    font-family:'Bebas Neue', cursive;
-    font-size: 50px;
-}
-.card-title{
-    font-family:'Baloo 2', cursive ;
-    font-size: 20px;
-    color: black;
-}
-.card-text{
-    font-family:'Baloo 2', cursive;
-    color: black;
-}
-.card{
-    z-index: -1;
-    box-shadow:  0 0 6px 0#7e8987;
-}*/
-
-
-
-
 
 
 
@@ -129,9 +127,9 @@ label{
     z-index: 1;
 }
 .menuPrincipal li a{
-    font-family:'Baloo 2', cursive;
+    font-family:$subtitulo-font;
     font-size: 20px;
-    color: black;
+    color: $color-texto;
 }
 .menuPrincipal li a:hover{
     color: #d7d6d5;
@@ -139,11 +137,6 @@ label{
 .logoMenu{
     width: 70px;
 }
-
-
-
-
-
 
 /*------------- submenu---------------- */
 .menuPrincipal li{
@@ -167,9 +160,9 @@ label{
 
 /* SECCION 1 */
 .parrafo{
-    color: black;
+    color: $color-texto;
     font-size: 20px;
-    font-family: 'Baloo 2', cursive;
+    font-family:$subtitulo-font ;
     text-align: center;
 }
 
@@ -179,9 +172,9 @@ label{
 /* SECCION 2 */
 .subtituloMenu2{
     text-align: center;
-    font-family: 'Yeseva One', cursive;
+    font-family: $titulo-font;
     margin-top: 60px;
-    color: black;
+    color: $color-texto;
 }
 .imagenMenu2{
     display: block;
@@ -190,9 +183,9 @@ label{
 }
 .menu2{
     text-align: center;
-    font-family: 'Baloo 2', cursive;
+    font-family: $subtitulo-font;
     font-size: 20px;
-    color: black;
+    color: $color-texto;
     text-align: center;
 }
 .menu2:hover{
@@ -204,9 +197,9 @@ label{
 /* SECCION 3 */
 .subtituloProductos{
     text-align: center;
-    font-family:'Yeseva One', cursive;
+    font-family:$titulo-font;
     margin-top: 60px;
-    color: black;
+    color: $color-texto;
 }
 .img{
     display: block;
@@ -215,9 +208,9 @@ label{
     margin: auto;
 }  
 .productos div h3{
-    font-family:'Baloo 2', cursive;
+    font-family:$subtitulo-font;
     font-size: 20px ;
-    color: black;
+    color: $color-texto;
     text-align: center;
 }
 
@@ -263,13 +256,13 @@ footer{
 .caja__footer h2{
     margin-bottom: 30px;
     color:#C9E265 ;
-    font-family:'Yeseva One', cursive;
+    font-family:$titulo-font;
 }
 .caja__footer a{
     text-decoration: none;
     margin-top: 10px;
-    color: black;
-    font-family:'Baloo 2', cursive; 
+    color: $color-texto;
+    font-family:$subtitulo-font; 
     font-weight:600;
 }
 .caja__footer a:hover{
@@ -279,8 +272,8 @@ footer{
     max-width: 350px;
     margin-top: 20px;
     font-size: 20px;
-    color: black;
-    font-family:'Baloo 2', cursive;
+    color: $color-texto;
+    font-family:$subtitulo-font;
 }
 .caja__copyright{
     max-width: 1200px;
@@ -291,7 +284,7 @@ footer{
 .caja__copyright p{
     margin-top: 20px;
     color: white;
-    font-family:'Baloo 2', cursive;
+    font-family:$subtitulo-font;
 }
 .caja__copyright hr{
     color: white;
@@ -321,12 +314,12 @@ footer{
 
 .tituloNosotros{
     font: size 35px;
-    font-family: 'Yeseva One', cursive;
+    font-family: $titulo-font;
     text-align: center;
     padding-top: 60px;
 }
 .parrafoNosotros{
-    font-family: 'Baloo 2', cursive;
+    font-family:$subtitulo-font;
     font-size: 20px;
     text-align: justify;
 }
@@ -343,18 +336,18 @@ footer{
 
 /* REIKI */
 .tituloReiki{
-    font-family:  'Yeseva One', cursive;
+    font-family: $titulo-font;
     font-size: 20px;
     padding: 8px;
-    color: #38A3A5;
+    color: $color-titulo;
     
 }
 .subtituloReiki{
-    font-family: 'Baloo 2', cursive;
+    font-family: $subtitulo-font;
     font-size: 25px;
 }
 .contenedorReiki div p{
-    font-family:'Baloo 2', cursive;
+    font-family:$subtitulo-font;
     font-size: 20px;
 }
 
@@ -397,10 +390,10 @@ footer{
 
 /* TERAPIA FLORAL */
 .tituloFloral{
-    font-family:'Yeseva One', cursive;
+    font-family:$titulo-font;
     font-size: 30px;
     padding-top: 8px;
-    color: #38A3A5;
+    color: $color-titulo;
 }
 
 .contenedorFloral{
@@ -426,15 +419,15 @@ footer{
     justify-content:center;
 }    
 .floral1 div p{
-    font-family:'Baloo 2', cursive;
+    font-family:$subtitulo-font;
     font-size: 20px;
 }
 .listaFloral{
-    font-family:'Baloo 2', cursive;
+    font-family:$subtitulo-font;
     font-size: 20px;
 }
 .subtituloFloral{
-    font-family: 'Baloo 2', cursive;
+    font-family: $subtitulo-font;
     font-size: 25px;
 }
 
@@ -442,10 +435,10 @@ footer{
 
 /* TERAPIA HOLISTICA */
 .tituloHolistica{
-    font-family:'Yeseva One', cursive;
+    font-family:$titulo-font;
     font-size: 15px;
     padding-top: 8px;
-    color: #38A3A5;
+    color: $color-titulo;
 }
 .contenedorHolistica{
     display: grid;
@@ -470,15 +463,15 @@ footer{
     justify-content:center
 }
 .holistica1 div p{
-    font-family:'Baloo 2', cursive;
+    font-family:$subtitulo-font;
     font-size: 20px;
 }
 .listaHolistica{
-    font-family:'Baloo 2', cursive;
+    font-family:$subtitulo-font;
     font-size: 20px;
 }
 .subtituloHolistica{
-    font-family: 'Baloo 2', cursive;
+    font-family:$subtitulo-font ;
     font-size: 25px;
 }
 
@@ -501,7 +494,7 @@ footer{
     text-decoration: none;
     margin: 15px;
     color: #C9E265;
-    font-family: 'Baloo 2', cursive;
+    font-family:$subtitulo-font;
     font-size: 20px; 
     cursor: pointer;
 }
@@ -538,8 +531,8 @@ footer{
     opacity: 0.7;
 }
 .nombre{
-    color: #38A3A5;
-    font-family:'Yeseva One', cursive ; 
+    color: $color-titulo;
+    font-family:$titulo-font ; 
 }
 .precio{
     font-size: large;
@@ -573,8 +566,8 @@ footer{
 /*  MODAL */
 
 .modal-title{
-    color: #38A3A5;
-    font-family:'Yeseva One', cursive ; 
+    color: $color-titulo;
+    font-family:$titulo-font ; 
     font-size: 20px;
 }
 .modal-carrito{
@@ -584,19 +577,19 @@ footer{
     margin: 15px;
 }
 .modal-text{
-    font-family: 'Baloo 2', cursive ;
+    font-family: $subtitulo-font;
     font-size: 15px;
 }
 
 
 //------------------- modal footer------------------
 .precioProducto{
-    font-family: 'Yeseva One', cursive;
+    font-family: $titulo-font;
     font-size: 15px;
-    color: #38A3A5;
+    color: $color-titulo;
 }
 #precioTotal{
-    font-family: 'Baloo 2', cursive ;
+    font-family: $subtitulo-font;
     font-size: 20px;
 }
 
@@ -605,7 +598,7 @@ footer{
     border: none;
     color:#38A3A5 ;
     font-size: 25px;
-    background-color: #C9E265 ;
+    background-color: $color-fondo ;
     border-radius: 50%;
     padding: 5px 15px;
     transition: all .3s;
@@ -621,7 +614,7 @@ footer{
 .boton-eliminar{
     border: none;
     border-radius: 5px;
-    background-color:#C9E265;
+    background-color:$color-fondo;
 }
 .boton-eliminar:hover{
     opacity: 0.8;

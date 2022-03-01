@@ -4,29 +4,28 @@
   padding: 0px;
   box-sizing: border-box; }
 
-/* ----------------FORMS------------------- */
-/* fomulario contacto*/
-.formulario2 {
+/* ----------------FORM------------------- */
+.formulario {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.formContacto {
+.formulario__contacto {
   background-color: #E2FDFF;
   width: 30%;
   padding: 10px 0px;
   border-radius: 10px;
   box-shadow: 0 0 6px 0 #7e8987; }
 
-.formContacto {
+.formulario__contacto {
   margin: auto; }
 
-.tituloForm {
+.formulario__titulo {
   color: #38A3A5;
   text-align: center;
   margin: 10px 0px;
-  font-family: 'Lobster', cursive; }
+  font-family: "Yeseva One", cursive; }
 
 .formulario__grupo {
   position: relative;
@@ -58,10 +57,10 @@ textarea:focus ~ label, textarea:valid ~ label {
   color: #38A3A5; }
 
 label {
-  font-family: 'Baloo 2', cursive; }
+  font-family: "Baloo 2", cursive; }
 
 /*------- BOTON FORM CONTACTO----------*/
-.botonContacto {
+.formulario__boton {
   display: block;
   width: 100px;
   height: 40px;
@@ -72,31 +71,30 @@ label {
   font-size: 16px;
   margin: 10px auto; }
 
-.botonContacto:hover {
+.formulario__boton:hover {
   color: #EAE2B7; }
+
+/*--------MEDIA QUERIES contacto-------*/
+@media screen and (max-width: 1100px) {
+  .formulario__contacto {
+    width: 50%; } }
+
+@media screen and (max-width: 600px) {
+  .formulario__contacto {
+    width: 60%; } }
+
+@media screen and (max-width: 450px) {
+  .formulario__contacto {
+    width: 80%; } }
+
+@media screen and (max-width: 300px) {
+  .formulario__contacto {
+    width: 90%; } }
 
 /* CATÁLOGO */
 .fondoTienda {
   background-color: #C9E265; }
 
-/*.tituloTienda{
-    color: #38A3A5;
-    font-family:'Bebas Neue', cursive;
-    font-size: 50px;
-}
-.card-title{
-    font-family:'Baloo 2', cursive ;
-    font-size: 20px;
-    color: black;
-}
-.card-text{
-    font-family:'Baloo 2', cursive;
-    color: black;
-}
-.card{
-    z-index: -1;
-    box-shadow:  0 0 6px 0#7e8987;
-}*/
 /* -MENU 1 Y SUBMENU- */
 /* -------------menu principal------------*/
 .navegacion {
@@ -105,7 +103,7 @@ label {
   z-index: 1; }
 
 .menuPrincipal li a {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px;
   color: black; }
 
@@ -134,13 +132,13 @@ label {
 .parrafo {
   color: black;
   font-size: 20px;
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   text-align: center; }
 
 /* SECCION 2 */
 .subtituloMenu2 {
   text-align: center;
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   margin-top: 60px;
   color: black; }
 
@@ -151,7 +149,7 @@ label {
 
 .menu2 {
   text-align: center;
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px;
   color: black;
   text-align: center; }
@@ -162,7 +160,7 @@ label {
 /* SECCION 3 */
 .subtituloProductos {
   text-align: center;
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   margin-top: 60px;
   color: black; }
 
@@ -173,7 +171,7 @@ label {
   margin: auto; }
 
 .productos div h3 {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px;
   color: black;
   text-align: center; }
@@ -215,13 +213,13 @@ footer {
 .caja__footer h2 {
   margin-bottom: 30px;
   color: #C9E265;
-  font-family: 'Yeseva One', cursive; }
+  font-family: "Yeseva One", cursive; }
 
 .caja__footer a {
   text-decoration: none;
   margin-top: 10px;
   color: black;
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-weight: 600; }
 
 .caja__footer a:hover {
@@ -232,7 +230,7 @@ footer {
   margin-top: 20px;
   font-size: 20px;
   color: black;
-  font-family: 'Baloo 2', cursive; }
+  font-family: "Baloo 2", cursive; }
 
 .caja__copyright {
   max-width: 1200px;
@@ -243,7 +241,7 @@ footer {
 .caja__copyright p {
   margin-top: 20px;
   color: white;
-  font-family: 'Baloo 2', cursive; }
+  font-family: "Baloo 2", cursive; }
 
 .caja__copyright hr {
   color: white; }
@@ -264,12 +262,12 @@ footer {
 
 .tituloNosotros {
   font: size 35px;
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   text-align: center;
   padding-top: 60px; }
 
 .parrafoNosotros {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px;
   text-align: justify; }
 
@@ -281,17 +279,17 @@ footer {
 /* --------------TERAPIAS ALTERNATIVAS-------------- */
 /* REIKI */
 .tituloReiki {
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   font-size: 20px;
   padding: 8px;
   color: #38A3A5; }
 
 .subtituloReiki {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 25px; }
 
 .contenedorReiki div p {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px; }
 
 .contenedorReiki {
@@ -326,7 +324,7 @@ footer {
 
 /* TERAPIA FLORAL */
 .tituloFloral {
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   font-size: 30px;
   padding-top: 8px;
   color: #38A3A5; }
@@ -351,20 +349,20 @@ footer {
   justify-content: center; }
 
 .floral1 div p {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px; }
 
 .listaFloral {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px; }
 
 .subtituloFloral {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 25px; }
 
 /* TERAPIA HOLISTICA */
 .tituloHolistica {
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   font-size: 15px;
   padding-top: 8px;
   color: #38A3A5; }
@@ -389,15 +387,15 @@ footer {
   justify-content: center; }
 
 .holistica1 div p {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px; }
 
 .listaHolistica {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px; }
 
 .subtituloHolistica {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 25px; }
 
 /*--------------------TIENDA------------------*/
@@ -411,7 +409,7 @@ footer {
   text-decoration: none;
   margin: 15px;
   color: #C9E265;
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px;
   cursor: pointer; }
 
@@ -445,7 +443,7 @@ footer {
 
 .nombre {
   color: #38A3A5;
-  font-family: 'Yeseva One', cursive; }
+  font-family: "Yeseva One", cursive; }
 
 .precio {
   font-size: large; }
@@ -474,7 +472,7 @@ footer {
 /*  MODAL */
 .modal-title {
   color: #38A3A5;
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   font-size: 20px; }
 
 .modal-carrito {
@@ -484,16 +482,16 @@ footer {
   margin: 15px; }
 
 .modal-text {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 15px; }
 
 .precioProducto {
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   font-size: 15px;
   color: #38A3A5; }
 
 #precioTotal {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 20px; }
 
 #abrir-modal {
