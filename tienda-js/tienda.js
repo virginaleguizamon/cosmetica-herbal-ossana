@@ -1,7 +1,8 @@
 
-
 // carro vacio
 let carritoDeCompras = []
+let stockProductos= []
+
 
 // cards
 const productos = document.querySelector(".contenedorProductos");
@@ -23,7 +24,7 @@ for (let i = 0; i < itemsNav.length; i++){
     e.preventDefault()
         
         if (itemsNav[i].id == "all") {
-            createCard(stockProductos);
+            createCard(stock);
         }
         else{
             createCard (stockProductos.filter( elemento => elemento.categoria == itemsNav[i].id))
@@ -32,6 +33,14 @@ for (let i = 0; i < itemsNav.length; i++){
     
     })
 }
+
+
+// ----------------JSON placeholder-----------------
+
+fetch('../stock.json')
+    .then (Response => Response.json())
+    .then(data => createCard(data))
+
 
 
 
@@ -78,7 +87,7 @@ const addCarrito = () => {
         
         iterator.addEventListener("click", () => {
             Toastify({
-                text: "💖Agregado al carrito",  /* Las notificaciones me encantaron, la usé acá porque creo que al usuario le da seguridad de que se agregó y no tener que entrar al carrito a fijarse.*/
+                text: "💖Agregado al carrito",  
                 className: "info",
                 gravity: "bottom",
                 style: {
@@ -102,10 +111,6 @@ const addCarrito = () => {
     }
 
 }
-createCard(stockProductos);
-
-
-
 
 
 // ----------- Eliminar productos ---------------
@@ -120,7 +125,7 @@ const eliminar = () =>{
         
         iterator.addEventListener("click", () => {
             Toastify({
-                text: " 💔 Eliminado",  /* Bueno, este lo mismo que el anterior pero para eliminar y asegurarse de que se eliminó correctamente.*/
+                text: " 💔 Eliminado",  
                 className: "info",
                 gravity: "bottom",
                 style: {
@@ -155,13 +160,13 @@ const eliminar = () =>{
 
 /*let cantidad  = carritoDeCompras.findIndex(elemento => elemento.id == id)
     if(cantidad){
-     
-      
+        cantidad.cantidad = cantidad.cantidad + 1
+
     }else{
+        addCarritp()
+    }*/
 
-    }
 
-*/
 
 // ------- Precio total carrito -------------
 function actualizarCarrito(){

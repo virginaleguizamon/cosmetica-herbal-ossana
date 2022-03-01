@@ -1,7 +1,7 @@
 //TOTAL: 12 PRODUCTOS
 
 
-let stockProductos = [
+/*let stockProductos = [
     {id:1,
     img: '../media/agua-micelar.PNG',  
     categoria: "Facial", 
@@ -109,4 +109,4 @@ let stockProductos = [
     precio: 1100, 
     cantidad:1
     },
-]
+]*/
