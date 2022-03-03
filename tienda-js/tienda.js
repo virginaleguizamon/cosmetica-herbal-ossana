@@ -1,8 +1,9 @@
 
 // carro vacio
 let carritoDeCompras = []
-let stockProductos= []
 
+// base de datos
+let stockProductos= []
 
 // cards
 const productos = document.querySelector(".contenedorProductos");
@@ -12,6 +13,23 @@ const contadorCarrito = document.getElementById('contadorCarrito');
 
 //precio total
 const precioTotal = document.getElementById('precioTotal');
+
+
+// ----------------fetch-----------------
+
+  window.addEventListener("load", async() =>{
+        const peticion = await fetch ("../stock.json")
+        const data = await peticion.json()
+
+        for (let i = 0; i < data.length; i++) {
+        stockProductos.push(data[i])
+            
+        }
+
+
+        createCard();
+        // console.log(stockProductos)
+    })  
 
 
 
@@ -24,52 +42,40 @@ for (let i = 0; i < itemsNav.length; i++){
     e.preventDefault()
         
         if (itemsNav[i].id == "all") {
-            createCard(stock);
+            createCard(stockProductos);
         }
         else{
             createCard (stockProductos.filter( elemento => elemento.categoria == itemsNav[i].id))
-            console.log(stockProductos.filter( elemento => elemento.categoria == itemsNav[i].id));
+            console.log(stockProductos.filter( elemento => elemento.categoria == itemsNav[i].id))
         }
     
     })
 }
 
 
-// ----------------JSON placeholder-----------------
-
-fetch('../stock.json')
-    .then (Response => Response.json())
-    .then(data => createCard(data))
-
-
-
-
 
 //------------------- Cards ----------------------
-function createCard(stockProductos){
+function createCard(){
     productos.innerHTML= "";
-    stockProductos.forEach(producto=>{
-    const {img, nombre, categoria, desc, precio, id} = producto
-    productos.innerHTML +=  
-
-        `
-                <div class="card">
-                   
-                    <img class="imagenCard" src="${img}" alt="${nombre}">
-                    
-                    <div class="cardTexto">
-                        <p class="categoria">${categoria}</p>
-                        <h2 class="nombre">${nombre}</h2>
-                        <p class="desc">${desc}</p>
-                        <p class="precio">$${precio}</p>
-                        <button class= "botonAdd" id="botonAgregar${id}">Agregar</button>
-                    </div>
-                </div> 
-        `
-       
-        
+    stockProductos.forEach( el =>{
+    productos.innerHTML +=
+                                    `
+                                        <div class="card">
+                                        
+                                            <img class="imagenCard" src="${el.img}" alt="${el.nombre}">
+                                            
+                                            <div class="cardTexto">
+                                                <p class="categoria">${el.categoria}</p>
+                                                <h2 class="nombre">${el.nombre}</h2>
+                                                <p class="desc">${el.desc}</p>
+                                                <p class="precio">$${el.precio}</p>
+                                                <button class= "botonAdd" id="botonAgregar${el.id}">Agregar</button>
+                                            </div>
+                                        </div> 
+                                    `
     })
-  
+
+
     addCarrito()
   
 }
@@ -158,14 +164,15 @@ const eliminar = () =>{
 
 //------------- Cantidad -----------------
 
-/*let cantidad  = carritoDeCompras.findIndex(elemento => elemento.id == id)
-    if(cantidad){
-        cantidad.cantidad = cantidad.cantidad + 1
+/*let repetido  = carritoDeCompras.findIndex(elemento => elemento.id == id)
+    if(repetido){
+        console.log(repetido)
+        repetido.cantidad = repetido.cantidad + 1
 
     }else{
-        addCarritp()
-    }*/
-
+        addCarrito()
+    }
+*/
 
 
 // ------- Precio total carrito -------------
