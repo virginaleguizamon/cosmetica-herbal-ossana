@@ -55,8 +55,8 @@ for (let i = 0; i < itemsNav.length; i++){
 
 
 //------------------- Cards ----------------------
-function createCard(){
-    productos.innerHTML= "";
+function createCard(parametro){
+    parametro.innerHTML= "";
     stockProductos.forEach( el =>{
     productos.innerHTML +=
                                     `
@@ -163,16 +163,17 @@ const eliminar = () =>{
 
 
 //------------- Cantidad -----------------
-
-/*let repetido  = carritoDeCompras.findIndex(elemento => elemento.id == id)
+/*function cantidad (){
+    let repetido  = carritoDeCompras.findIndex(elemento => elemento.id == id)
     if(repetido){
-        console.log(repetido)
-        repetido.cantidad = repetido.cantidad + 1
-
+        carritoDeCompras[repetido].cantidad + 1
+        
     }else{
         addCarrito()
     }
-*/
+
+}*/
+
 
 
 // ------- Precio total carrito -------------
