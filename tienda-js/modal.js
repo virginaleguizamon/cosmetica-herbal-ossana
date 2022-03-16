@@ -43,7 +43,8 @@
       showConfirmButton: false,
       timer: 1500
     })
-
+      carritoDeCompras = []
+      actualizarCarrito()
   })
 
 
