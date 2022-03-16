@@ -43,7 +43,7 @@ let itemsNav = document.getElementsByClassName("navItem");
 
 for (let i = 0; i < itemsNav.length; i++){
         
-    itemsNav[i].addEventListener("click", (e) => {
+    itemsNav[i].addEventListener("click", () => {
   
         
         if (itemsNav[i].id == "all") {
