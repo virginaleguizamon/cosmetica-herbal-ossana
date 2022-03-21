@@ -163,7 +163,7 @@ label{
     color: $color-texto;
     font-size: 20px;
     font-family:$subtitulo-font ;
-    text-align: center;
+    text-align: justify;
 }
 
 
@@ -350,30 +350,29 @@ footer{
     font-family:$subtitulo-font;
     font-size: 20px;
 }
-
 .contenedorReiki{
     display: grid;
     grid-template-areas: 
-    "reiki1 reiki2 reiki3";
-    grid-template-columns: 5fr 5fr 5fr;
-    grid-template-rows: 100%;
+    "reiki1"
+    "reiki2"
+    "reiki3";
 }
 .reiki1{
     grid-area: reiki1;
-    margin: 8px;
-    text-align: justify;
+    margin: 15px;
+    text-align: center;
     
 }
 .reiki2{
     grid-area: reiki2;
-    margin: 15px;
-    text-align: justify;
+    margin: 30px;
+    text-align: center;
    
 }
 .reiki3{
     grid-area: reiki3;
-    margin: 8px;
-    text-align: justify;
+    margin: 30px;
+    text-align: center;
 }
 
 .main2{
@@ -405,7 +404,7 @@ footer{
 }
 .floral1{
     grid-area: floral1;
-    margin-bottom: 35px;
+    margin-bottom: 5%;
     text-align: center;
 }
 .floral2{
@@ -417,6 +416,7 @@ footer{
     grid-area: floral3;
     display: flex;
     justify-content:center;
+    margin-bottom: 8%;
 }    
 .floral1 div p{
     font-family:$subtitulo-font;

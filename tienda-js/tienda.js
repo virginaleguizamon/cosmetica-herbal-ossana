@@ -31,7 +31,6 @@ const precioTotal = document.getElementById('precioTotal');
 
         createCard(stockProductos);
         actualizarCarrito();
-        // console.log(stockProductos)
     })  
 
 
@@ -114,13 +113,13 @@ const addCarrito = () => {
             
             let productoAgregar = stockProductos.find( el => el.id  ===  parseInt(id) )
             if (verificar != -1) {
+
                 carritoDeCompras[verificar].cantidad += 1
-                console.log("modificar cantidad");
+            
             }else{
-                console.log(productoAgregar);
+
                 carritoDeCompras.push(productoAgregar)
             }
-            console.log(carritoDeCompras);
 
 
             actualizarCarrito();
@@ -153,17 +152,13 @@ const eliminar = () =>{
            
 
             let id =  iterator.id.slice(13)
-            //console.log(iterator.parentElement)
             
             carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id != id)
-            console.log(carritoDeCompras);
             
 
             //-----reutilizo la interfaz del modal-------
             iterator.parentElement.remove()
             
-
-
             actualizarCarrito();
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
 

@@ -1,5 +1,5 @@
 
-// productos en el modal
+ // productos en el modal
 
  let botonAbrir = document.getElementById("abrir-modal")
     
@@ -8,6 +8,9 @@
   })
 
 
+
+
+ // --------------------------- modal --------------------------------
     
   const pintarModal = () =>{
     let modalBody = document.getElementById("modal-body")
@@ -32,14 +35,16 @@
     })    
     eliminar();
   }   
-  
+
+
+  //-------------- finalizar compra ---------------------
 
   let botonComprar = document.getElementById ("botonComprar")
   botonComprar.addEventListener("click", () =>{
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: '¡Su compra ha sido éxitosa!',
+      title: '¡Gracias por su compra!',
       showConfirmButton: false,
       timer: 1500
     })
